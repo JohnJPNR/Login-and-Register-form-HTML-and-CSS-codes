@@ -1,0 +1,185 @@
+HTML CODES
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login form</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="formbox">
+        <div class="buttonbox">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="Login()">
+            login
+          </button>
+          <button type="button" class="toggle-btn" onclick="Register()">
+            register
+          </button>
+        </div>
+        <form id="Login" class="forminput">
+          <input
+            type="text"
+            class="input-feild"
+            placeholder="username"
+            required
+          /><input
+            type="text"
+            class="input-feild"
+            placeholder="password"
+            required
+          />
+          <input type="checkbox" class="checkbox" />
+          <span>remember password</span>
+          <button type="button" class="submit-btn">SUBMIT</button>
+        </form>
+        <form id="Register" class="forminput">
+          <input
+            type="text"
+            class="input-feild"
+            placeholder="username"
+            required
+          />
+          <input
+            type="email"
+            class="input-feild"
+            placeholder="email"
+            required
+          />
+          <input
+            type="text"
+            class="input-feild"
+            placeholder="password"
+            required
+          />
+          <input type="checkbox" class="checkbox" />
+          <span>I agree to the condition</span>
+          <button type="button" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("Login");
+      var y = document.getElementById("Register");
+      var z = document.getElementById("btn");
+
+      function Register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+
+      function Login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>
+
+
+CSS CODES
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.page {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.formbox {
+  width: 500px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: lightgreen;
+  padding: 200px;
+}
+.buttonbox {
+  width: 300px;
+  margin: 25px auto;
+  position: relative;
+  box-shadow: green;
+  border-radius: 30px;
+  padding: 2px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  outline: none;
+  position: relative;
+  padding: 5px;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 75pxpx;
+  height: 75%;
+  background: green;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.forminput {
+  top: 180px;
+  position: relative;
+  width: 280px;
+  transition: 0.5sec;
+}
+.input-feild {
+  height: auto;
+  width: 100;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn {
+  width: 85px;
+  padding: 10px 0;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  color: aliceblue;
+  background: green;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.checkbox {
+  margin: 30px 10px 30px 0;
+}
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+#Login {
+  left: 50px;
+}
+#Register {
+  height: auto;
+  left: 450px;
+}
